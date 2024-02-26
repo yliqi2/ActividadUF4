@@ -36,10 +36,11 @@ public class manejo {
 			} while (precio < 0);
 			
 			revista R = new revista(id, titulo, autor, tematica, precio);
+			System.out.println("");
 			System.out.println("Se ha añadido la revista: ");
 			R.imprimir();
 			Biblioteca.add(R);
-		} else {
+		} else if (input.equalsIgnoreCase("articulo")) {
 			String disp;
 			boolean disponible = false;
 			do {
@@ -52,6 +53,7 @@ public class manejo {
 				disponible = false;
 			}
 			articulo A = new articulo(id, titulo, autor, tematica, disponible);
+			System.out.println("");
 			System.out.println("Se ha añadido el articulo: ");
 			A.imprimir();
 			Biblioteca.add(A);

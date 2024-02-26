@@ -45,17 +45,32 @@ public class menu {
 				}
 			case "3":
 				if (stockMaterial == true) {
-					manejo.modifyMaterial();
+					buscar.BuscarXtitulo();
 				} else {
 					System.out.println("No hay valores");
 					break;
 				}
 			case "4":
-				break;
+				if (stockMaterial == true) {
+					buscar.BuscarXautor();
+				} else {
+					System.out.println("No hay valores");
+					break;
+				}
 			case "5":
-				break;
+				if (stockMaterial == true) {
+					buscar.BuscarXtematica();
+				} else {
+					System.out.println("No hay valores");
+					break;
+				}
 			case "6":
-				break;
+				if (stockMaterial == true) {
+					manejo.modifyMaterial();
+				} else {
+					System.out.println("No hay valores");
+					break;
+				}
 			case "7":
 				break;
 			case "8":

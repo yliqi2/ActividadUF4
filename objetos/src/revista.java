@@ -18,12 +18,13 @@ public class revista extends materialL{
 	}
 
 	@Override
-	public void imprimir() {
+	public void imprimir() throws InterruptedException {
 		System.out.println("El id es: " + getId());
 		System.out.println("El titulo es: " + getTitulo());
 		System.out.println("El autor es: " + getAutor());
 		System.out.println("El tema es: " + getTematica());
 		System.out.println("El precio es: " + this.precio);
+		Thread.sleep(1000);
 	}
 
 	@Override
