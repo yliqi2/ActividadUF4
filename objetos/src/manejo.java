@@ -21,7 +21,7 @@ public class manejo {
 		System.out.println("Inserta autor: ");
 		String autor = sc_line.nextLine();
 		System.out.println("Inserta tematica: ");
-		String tematica = sc_line.nextLine();
+		String tematica = sc_line.nextLine();	
 		if (input.equalsIgnoreCase("libro")) {
 			libro L = new libro(id, titulo, autor, tematica, false);
 			System.out.println("");
@@ -71,10 +71,29 @@ public class manejo {
 		do {
 			System.out.println("Elimina mediante la posicion del material:");
 			input = sc.nextInt();
-		} while (input > Biblioteca.size());
+		} while (input > Biblioteca.size() && input < 0);
 		Biblioteca.remove(input);
 		
 		
+	}
+	
+	public static void modifyMaterial() throws InterruptedException {
+		int input;
+		int aux = 0;
+		System.out.println("Listado del material de la biblioteca:");
+		for (materialL m : Biblioteca) {
+			System.out.println("La posicion es: " + aux);
+			m.imprimir();
+			aux++;
+			System.out.println();
+		}
+		do {
+			System.out.println("Modifica mediante la posicion del material:");
+			input = sc.nextInt();
+		} while (input > Biblioteca.size() && input < 0);
+		System.out.println("Modificaras el siguiente material:");
+		Biblioteca.get(input).editar();
+
 	}
 	
 	public static void imprimirtodo () throws InterruptedException {

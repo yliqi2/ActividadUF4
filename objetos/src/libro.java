@@ -31,7 +31,11 @@ public class libro extends materialL{
 		System.out.println("El autor es: " + getAutor());
 		System.out.println("El tema es: " + getTematica());
 		System.out.println("Esta reservado: " + this.reservado);
-		System.out.println("");
 		Thread.sleep(1000);
+	}
+
+	@Override
+	public void editar() {
+		super.editar();
 	} 
 }

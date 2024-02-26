@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 import java.util.Scanner;
 public class menu {
 	
@@ -7,7 +7,7 @@ public class menu {
 	public static void main(String[] args) throws InterruptedException {
 		String eleccion = "0";
 		boolean stockMaterial = false;
-		while (!eleccion.equals("11")) {
+		while (!eleccion.equals("12")) {
 			System.out.println("---------------MENU---------------");
 			System.out.println("1.Agregar");
 			System.out.println("2.Eliminar");
@@ -35,7 +35,7 @@ public class menu {
 			case "2":
 				if (stockMaterial == true) {
 					manejo.deleteMaterial();
-					if (manejo.Biblioteca == null) {
+					if (manejo.Biblioteca.size() == 0) {
 						stockMaterial = false;
 					}
 					break;
@@ -44,7 +44,12 @@ public class menu {
 					break;
 				}
 			case "3":
-				break;
+				if (stockMaterial == true) {
+					manejo.modifyMaterial();
+				} else {
+					System.out.println("No hay valores");
+					break;
+				}
 			case "4":
 				break;
 			case "5":

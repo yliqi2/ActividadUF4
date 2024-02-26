@@ -1,7 +1,9 @@
+import java.util.Scanner;
 
 public class articulo extends materialL{
 	private boolean disponible;
-
+	public static Scanner sc = new Scanner (System.in);
+	
 	public articulo(int id, String titulo, String autor, String tematica, boolean disponible) {
 		super(id, titulo, autor, tematica);
 		this.disponible = disponible;
@@ -23,6 +25,24 @@ public class articulo extends materialL{
 		System.out.println("El tema es: " + getTematica());
 		System.out.println("Disponibilidad: " + this.disponible);
 		
+	}
+
+	@Override
+	public void editar() {
+		super.editar();
+		String disp;
+		boolean disponible = false;
+		System.out.println("Modificara el titulo: " + isDisponible());
+		do {
+			System.out.println("Esta disponible? SI/NO");
+			disp = sc_line.nextLine();
+		} while (!disp.equalsIgnoreCase("SI") && !disp.equalsIgnoreCase("NO"));
+		if (disp.equalsIgnoreCase("si")) {
+			disponible = true;
+		} else if (disp.equalsIgnoreCase("no")) {
+			disponible = false;
+		}
+		setDisponible(disponible);
 	}
 	
 }
