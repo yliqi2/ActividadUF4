@@ -23,18 +23,7 @@ public class manejo {
 		System.out.println("Inserta tematica: ");
 		String tematica = sc_line.nextLine();
 		if (input.equalsIgnoreCase("libro")) {
-			String res;
-			boolean reserva = false;
-			do {
-				System.out.println("Esta reservado? SI/NO");
-				res = sc_line.nextLine();
-			} while (!res.equalsIgnoreCase("SI") && !res.equalsIgnoreCase("NO"));
-			if (res.equalsIgnoreCase("si")) {
-				reserva = true;
-			} else if (res.equalsIgnoreCase("no")) {
-				reserva = false;
-			}
-			libro L = new libro(id, titulo, autor, tematica, reserva);
+			libro L = new libro(id, titulo, autor, tematica, false);
 			System.out.println("");
 			System.out.println("Se ha añadido el libro: ");
 			L.imprimir();
@@ -71,9 +60,12 @@ public class manejo {
 	}
 	public static void deleteMaterial() throws InterruptedException {
 		int input;
+		int aux = 0;
 		System.out.println("Listado del material de la biblioteca:");
 		for (materialL m : Biblioteca) {
+			System.out.println("La posicion es: " + aux);
 			m.imprimir();
+			aux++;
 			System.out.println();
 		}
 		do {
@@ -83,5 +75,12 @@ public class manejo {
 		Biblioteca.remove(input);
 		
 		
+	}
+	
+	public static void imprimirtodo () throws InterruptedException {
+		for (materialL m : Biblioteca) {
+			m.imprimir();
+			System.out.println();
+		}
 	}
 }
