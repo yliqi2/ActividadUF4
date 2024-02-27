@@ -45,35 +45,41 @@ public class menu {
 				}
 			case "3":
 				if (stockMaterial == true) {
-					buscar.BuscarXtitulo();
+					manejo.modifyMaterial();
+					break;
 				} else {
 					System.out.println("No hay valores");
 					break;
 				}
 			case "4":
 				if (stockMaterial == true) {
-					buscar.BuscarXautor();
+					buscar.BuscarXtitulo();
+					break;
 				} else {
 					System.out.println("No hay valores");
 					break;
 				}
 			case "5":
 				if (stockMaterial == true) {
-					buscar.BuscarXtematica();
+					buscar.BuscarXautor();
+					break;
 				} else {
 					System.out.println("No hay valores");
 					break;
 				}
 			case "6":
 				if (stockMaterial == true) {
-					manejo.modifyMaterial();
+					buscar.BuscarXtematica();
+					break;
 				} else {
 					System.out.println("No hay valores");
 					break;
 				}
 			case "7":
+				reservas.reservarLibro();
 				break;
 			case "8":
+				reservas.cancelarReservaLibro();
 				break;
 			case "9":
 				if (stockMaterial == true) {
@@ -98,5 +104,4 @@ public class menu {
 	
 	
 }
-
 
