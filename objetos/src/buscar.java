@@ -15,9 +15,9 @@ public class buscar {
 		for (materialL m : manejo.Biblioteca) {
 			if(m.getTitulo().equals(titulo)) {
 				m.imprimir();
+				System.out.println("");
 			}
 		}
-		System.out.println("");
 }
 //				if(m instanceof libro) {
 //					m.getTitulo();
@@ -34,9 +34,9 @@ public class buscar {
 		for (materialL m : manejo.Biblioteca) {
 			if(m.getAutor().equals(autor)) {
 				m.imprimir();
+				System.out.println("");
 			}
 		}
-		System.out.println("");
 }
 	
 	public static void BuscarXtematica() throws InterruptedException {
@@ -48,8 +48,8 @@ public class buscar {
 			for (materialL m : manejo.Biblioteca) {
 				if(m.getTematica().equals(tematica)) {
 					m.imprimir();
+					System.out.println("");
 				}
 			}
-			System.out.println("");
 	}
 }
