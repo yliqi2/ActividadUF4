@@ -18,23 +18,34 @@ public class buscar {
 		System.out.println("Inserta el titulo: ");
 		String titulo = sc_line.nextLine();
 		if (input.equalsIgnoreCase("libro")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(titulo)) {
+					m.imprimir();
+				}
+//				if(m instanceof libro) {
+//					m.getTitulo();
+//					libro l = (libro) m;
+//					l.isReservado();
+//				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
 		} else if (input.equalsIgnoreCase("revista")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(titulo)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
 		} else if (input.equalsIgnoreCase("articulo")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(titulo)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
@@ -53,23 +64,29 @@ public class buscar {
 		System.out.println("Inserta el autor: ");
 		String autor = sc_line.nextLine();
 		if (input.equalsIgnoreCase("libro")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(autor)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
 		} else if (input.equalsIgnoreCase("revista")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(autor)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
 		} else if (input.equalsIgnoreCase("articulo")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(autor)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
@@ -88,23 +105,29 @@ public class buscar {
 		System.out.println("Inserta el autor: ");
 		String tematica = sc_line.nextLine();
 		if (input.equalsIgnoreCase("libro")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(tematica)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
 		} else if (input.equalsIgnoreCase("revista")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(tematica)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
 		} else if (input.equalsIgnoreCase("articulo")) {
-
-			
-			
+			for (materialL m : manejo.Biblioteca) {
+				if(m.getTitulo().equals(tematica)) {
+					m.imprimir();
+				}
+			}
 			
 			System.out.println("");
 			Thread.sleep(1000);
