@@ -18,7 +18,6 @@ public class buscar {
 			}
 		}
 		System.out.println("");
-		Thread.sleep(1000);
 }
 //				if(m instanceof libro) {
 //					m.getTitulo();
@@ -38,7 +37,6 @@ public class buscar {
 			}
 		}
 		System.out.println("");
-		Thread.sleep(1000);
 }
 	
 	public static void BuscarXtematica() throws InterruptedException {
@@ -53,6 +51,5 @@ public class buscar {
 				}
 			}
 			System.out.println("");
-			Thread.sleep(1000);
 	}
 }
